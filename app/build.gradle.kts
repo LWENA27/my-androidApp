@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.mobilecrudapp"
-    compileSdk = 33
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.mobilecrudapp"
@@ -22,14 +22,18 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
     }
 }
 
 dependencies {
-
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
